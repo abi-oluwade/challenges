@@ -20,6 +20,11 @@ def load_words():
 def calc_word_value():
     """Calculate the value of the word entered into function
     using imported constant mapping LETTER_SCORES"""
+    total = 0
+    word = input("Please supply a word")
+    for letter in word:
+        total += LETTER_SCORES[letter.upper()]
+        return total
     pass
 
 def max_word_value():
@@ -30,4 +35,5 @@ def max_word_value():
 if __name__ == "__main__":
     pass # run unittests to validate
 
-print(load_words())
+#print(load_words())
+print(calc_word_value())
